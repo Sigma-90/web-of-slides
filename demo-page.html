@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Web of Slides Examples</title>
+	<meta name="description" content="Demo-Page for the JQuery plugin 'Web of Slides'">
+	<meta name="viewport" content="width=device-width">
+	
+	<link rel="stylesheet" language="text/css" href="styles.css" />
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+	<script src="jquery.web-of-slides.js"></script>
+</head>
+<body>
+	<h1>Examples</h1>
+	<div class="demo-container">
+		<h2>Interactive Slideshow</h2>
+		
+		<div class="web-of-slides equalize-heights">
+            <figure id="slide0" class="slide active clearfix">
+                <div class="slide-canvas">
+                    <img height="150" width="200" alt="Example Image" src="example.png">
+                </div>
+                <figcaption class="slide-comments">
+                    <h4>Plugin features</h4>
+                    <p>Click on the Next button to begin the slideshow that explains how this plugin works.</p>
+                    <div class="button-box">
+                        <a class="animation-nav-btn reset" href="#slide1" id="toSlide1">Next <span>&rsaquo;</span></a>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure id="slide1" class="slide clearfix">
+                <div class="slide-canvas">
+                    <img height="150" width="200" alt="Example Image" src="example.png">
+                </div>
+                <figcaption class="slide-comments" data-text-delay="1000">
+                    <h4><span>1</span>Branched Slides</h4>
+                    <p>You can have more than one link per slide and each one can define which slide is shown next. That way you can create slideshows that are able to branch out, depending on the viewers choice.</p>
+                </figcaption>
+				<div class="nav-btn-wrapper">
+                    <a class="animation-nav-btn" href="#slide2" id="toSlide2">Autoplay Feature <span>&rsaquo;</span></a>
+					<a class="animation-nav-btn" href="#slide4" id="skipToSlide4">Creating Loops <span>&rsaquo;</span></a>
+                </div>
+             </figure>
+			<figure id="slide2" class="slide clearfix">
+				<div class="slide-canvas">
+					<img height="150" width="200" alt="Example Image" src="example.png">
+				</div>
+				<figcaption class="slide-comments">
+					<h4><span>2</span>Autoplay</h4>
+                    <p>You can choose to play all slides automatically. The time a slide is shown before the next one is brought up can be defined for each slide individually.</p>
+                    <a class="animation-nav-btn" href="#slide3" id="toSlide3">Next <span>&rsaquo;</span></a>
+				</figcaption>
+			</figure>
+            <figure id="slide3" class="slide clearfix">
+                <div class="slide-canvas">
+                    <img height="150" width="200" alt="Example Image" src="example.png">
+                </div>
+                <figcaption class="slide-comments">
+                    <h4><span>2.1</span>Pitfalls of Autoplay</h4>
+					<p>The autoplay feature will save the user a few clicks, but might irritate people in case the next slide is shown before they finished reading or if they have to wait too long for the next slide. It also linearizes the animation, as it can't branch out anymore (unless you pause it).</p>
+                    <a class="animation-nav-btn" href="#slide4" id="toSlide4">Next <span>&rsaquo;</span></a>
+                </figcaption>
+            </figure>
+            <figure id="slide4" class="slide clearfix">
+                <div class="slide-canvas">
+                    <img height="150" width="200" alt="Example Image" src="example.png">
+                </div>
+                <figcaption class="slide-comments">
+                    <h4><span>3</span>Create Loops</h4>
+                    <p>Because of the interlinked structure of the slides it is no problem to jump back to the beginning.</p>
+                    <a class="animation-nav-btn left-icon" href="#slide0" id="toSlide0"><span>&laquo;</span>Back to the start</a>
+                </figcaption>
+            </figure>
+		</div>
+		
+	<div class="demo-container">
+		<h2>Automatic Slideshow</h2>
+		
+		<div class="web-of-slides equalize-heights">
+            <div id="slide0_1" class="slide active pause clearfix">
+                <div class="slide-canvas">
+                    <img height="150" width="200" alt="Example Image" src="example.png">
+                    <a href="#slide1_1" id="playFromSlide1_1" class="animation-play-btn"><img src="play_btn_ht.png" alt="Play"></a>
+                </div>
+                <div class="slide-comments">
+                    <h4>Plugin features</h4>
+                    <p>Click the start button to play an animation that explains how this plugin works.</p>
+                    <div class="button-box">
+                        <a class="animation-nav-btn invis" href="#slide1_1" id="toSlide1_1">Next <span>&rsaquo;</span></a>
+                    </div>
+                </div>
+            </div>
+            <div id="slide1_1" class="slide clearfix" data-slide-anim-speed="2000">
+                <div class="slide-canvas">
+                    <img height="150" width="200" alt="Example Image" src="example.png">
+                </div>
+                <div class="slide-comments" data-text-delay="2000">
+                    <h4><span>1</span>Branched Slides</h4>
+                    <p>You can have more than one link per slide and each one can define which slide is shown next. That way you can create slideshows that are able to branch out, depending on the viewers choice.</p>
+                     <a class="animation-nav-btn" href="#slide2_1" id="toSlide2_1">Next <span>&rsaquo;</span></a>
+                </div>
+ <!--
+                 <div class="a-nav-btn-wrapper">
+                     <a href="#slide2" class="animation-nav-btn">Next &rsaquo;</a>
+                 </div>
+ -->
+            </div>
+			<div id="slide2_1" class="slide clearfix">
+				<div class="slide-canvas">
+					<img height="150" width="200" alt="Example Image" src="example.png">
+				</div>
+				<div class="slide-comments">
+					<h4><span>2</span>Autoplay</h4>
+                    <p>You can choose to play all slides automatically. The time a slide is shown before the next one is brought up can be defined for each slide individually.</p>
+                    <a class="animation-nav-btn" href="#slide3_1" id="toSlide3_1">Next <span>&rsaquo;</span></a>
+				</div>
+			</div>
+            <div id="slide3_1" class="slide pause clearfix">
+                <div class="slide-canvas">
+                    <img height="150" width="200" alt="Example Image" src="example.png">
+                </div>
+                <div class="slide-comments">
+                    <h4><span>2.1</span>Pitfalls of Autoplay</h4>
+					<p>The autoplay feature will save the user a few clicks, but might irritate people in case the next slide is shown before they finished reading or if they have to wait too long for the next slide. It also linearizes the animation, as it can't branch out anymore. Unless you pause it, like here.</p>
+                    <a class="animation-nav-btn" href="#slide4_1" id="toSlide4_1">Next <span>&rsaquo;</span></a>
+                </div>
+            </div>
+            <div id="slide4_1" class="slide clearfix">
+                <div class="slide-canvas">
+                    <img height="150" width="200" alt="Example Image" src="example.png">
+                </div>
+                <div class="slide-comments">
+                    <h4><span>3</span>Create Loops</h4>
+                    <p>Because of the interlinked structure of the slides it is no problem to jump back to the beginning.</p>
+                    <a class="animation-nav-btn left-icon" href="#slide0_1" id="toSlide0_1"><span>&laquo;</span>Back to the start</a>
+                </div>
+            </div>
+		</div>
+	</div>
+</body>
+</html>
