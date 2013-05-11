@@ -1,15 +1,19 @@
 Web of Slides, a JQuery plugin that allows to build interlinked slideshows
+
 -------------
 Documentation
 -------------
 
 Plugin and documentation created by: Stefan Winkler (https://github.com/Sigma-90, http://webentwinkler.net)
+
 Documentation for Version: 0.9.1 (beta)
+
 Updated: December 21st, 2012
 
 ------------------------------------------
 
 What does this plugin do?
+-------------------------
 
 This plugin helps to create interactive, branchable slideshows. Auto-play is also possible, 
 but keep in mind that applying this to all slides means to give up the capability of 
@@ -34,14 +38,18 @@ HTML tags. Check the section "Behavior alteration" below for details.
 ------------------------------------------
 
 Requirements:
+-------------
 
-JQuery 1.8.3 or higher, should work with older versions as well but I won't make any promises.
+ - JQuery 1.8.3 or higher, should work with older versions as well but I won't make any promises.
+
+ - A modern browser that supports CSS3 and HTML5 (if you intend to use the default CSS)
 
 ------------------------------------------
 
-Usage:
 
--------------------
+Usage:
+------
+
 HTML/CSS structure:
 -------------------
 
@@ -86,10 +94,10 @@ culture, feel free to do so, the plugin will still work as long as you maintain 
 Last but not least, the navigational links: Those have to have the class "animation-nav-btn" and their href
 attribute has to be an on-page anchor for the target slide (like "#target_slide_id"), it's as easy as that.
 
+---------------------------
 
---------------------
-Behavior alteration:
---------------------
+Configuring plugin behavior
+---------------------------
 
 Stopping auto-play at a certain slide:
 ----------------------------------------
