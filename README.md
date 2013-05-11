@@ -47,8 +47,7 @@ Requirements:
 Usage
 -----
 
-HTML/CSS structure
-------------------
+### HTML/CSS structure ###
 
 A certain structure has to be maintained and there are some important class names that must be present.
 While the plugin is intended for HTML5 pages where the entire slide is a `<figure>` tag and the text a 
@@ -94,22 +93,21 @@ attribute has to be an on-page anchor for the target slide (like "#target_slide_
 
 ---------------------------
 
-Configuring the plugin's behavior
----------------------------------
+### Configuring the plugin's behavior ###
 
-### Stopping auto-play at a certain slide: ###
+#### Stopping auto-play at a certain slide: ####
 
 The special class `reset`, when used on an `animation-nav-btn` link aborts an automated animation at the 
 current slide to require user interaction for the entire rest of the presentation. 
 
-### Pausing auto-play at a certain slide: ###
+#### Pausing auto-play at a certain slide: ####
 
 If the slide itself has the class `pause` or contains more than one link with the class 
 `animation-nav-btn`, the automated animation flow gets paused at at the current slide and the 
 buttons are shown, so the user can decide which branch to follow. The animation will resume when 
 a slide without the `pause` class is reached, as long as no button has the `reset` class.
 
-### Configuring the delay between slides for auto-play: ###
+#### Configuring the delay between slides for auto-play: ####
 
 If a slide has the attribute `data-slide-anim-speed` and its value is a number, this number will 
 define the amount of milliseconds the slide will be shown during an automated animation sequence.
@@ -117,7 +115,7 @@ If it is not set, the default value of 4000 milliseconds will be used. The defau
 modified by adding the attribute `data-overall-anim-speed` to the link that starts the animation 
 (the link with the class `animation-play-btn`).
 
-### Configuring the delay between image and text: ###
+#### Configuring the delay between image and text: ####
 
 The delay after which the text will be shown once the image appeared is a quarter of a second by 
 default, but if the `slide-comments` container has the attribute `data-text-delay` specified and 
@@ -128,7 +126,7 @@ slide is shown before the current slide's text. So, if the slide has `data-slide
 and the `slide-comments` container has `data-text-delay="2000"`, the entire slide will be visible 
 for 7 seconds in total.
 
-### Positioning of images and text: ###
+#### Positioning of images and text: ####
 
 By default, it is intended that the image appears on the left and the related text on the right,
 because of the western culture where text is read from left to right. If you want to swap this 
